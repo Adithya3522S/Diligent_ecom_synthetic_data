@@ -1,23 +1,56 @@
 # E-commerce Synthetic Data
 
-This project sets up the groundwork for generating and working with synthetic e-commerce datasets. It will eventually include:
+This project provides a complete workflow for generating and analyzing synthetic e-commerce datasets. It includes:
 
-- Scripts for creating realistic e-commerce datasets for testing and prototyping
-- Utilities to ingest generated data into a local SQLite database
-- Example SQL queries that demonstrate common analytics workflows on the dataset
+* Scripts for creating realistic customer, product, order, and payment datasets
+* Utilities to ingest generated data into a local SQLite database
+* Example SQL queries demonstrating common analytics workflows
 
 ## Current Structure
 
-- data/: placeholder for generated datasets and intermediate assets
-- db/: placeholder for SQLite files or migration helpers
-- scripts/: placeholder for Python utilities (dataset generation, ingestion, helpers)
-- sql/: placeholder for example SQL queries and snippets
+* `data/`: auto-generated datasets (CSV files)
+* `db/`: generated SQLite database (`ecom.db`)
+* `scripts/`: Python utilities for data generation, ingestion, and running queries
+* `sql/`: example SQL queries for analytics
 
 ## Getting Started
 
 1. Activate the Python virtual environment:
-   - Windows: env\\Scripts\\activate
-   - macOS/Linux: source venv/bin/activate
-2. Install dependencies: pip install -r requirements.txt
 
-This repository currently only contains the scaffolding; implementation code will be added later.
+   * Windows:
+
+     ```
+     venv\Scripts\activate
+     ```
+
+   * macOS/Linux:
+
+     ```
+     source venv/bin/activate
+     ```
+
+2. Install dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Generate synthetic datasets:
+
+   ```
+   python scripts/generate_ecom_data.py
+   ```
+
+4. Ingest datasets into SQLite:
+
+   ```
+   python scripts/ingest_to_sqlite.py
+   ```
+
+5. Run example SQL queries:
+
+   ```
+   python scripts/run_queries.py
+   ```
+
+The repository is fully functional with dataset generation, ingestion, and analysis workflows.
